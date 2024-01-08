@@ -45,6 +45,11 @@ int main()
 
     bool isEqual = true;
 
+    /*
+        We found the max, now we are making the remaining candies equal to the max.
+        If we can do this with the candy we have, we will check the second condition.
+        If we don't have enough candy, isEqual will be false.
+    */
     for(int i = 0; i < numberOfChildren && numberOfCandies > 0; i++)
     {
         while(candies[i] < max && numberOfCandies > 0)
@@ -59,6 +64,10 @@ int main()
         }
     }
 
+    /*
+        Now, if remaining candies can be distributed to the children equally, 
+        we will print 1. Else, we will print 0.
+    */
     if(numberOfCandies % numberOfChildren == 0 && isEqual)
     {
         cout << "1";
